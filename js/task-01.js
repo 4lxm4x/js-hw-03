@@ -1,13 +1,22 @@
-// Напиши функцию logItems(array), которая получает массив и использует цикл for, который для каждого элемента массива будет выводить в консоль сообщение в формате [номер элемента] - [значение элемента].
+const user = {
+    name: 'Mango',
+    age: 20,
+    hobby: 'html',
+    premium: true,
+};
+    const modify = () => {
+        user.mood = 'happy';
+        user.hobby = 'skydiving';
+        user.premium = 'false';
+        const keys = Object.keys(user);
+        for (const key of keys) {
+            console.log(`${key} : ${user[key]}`);
 
-// Нумерация должна начинаться с 1. К примеру для первого элемента массива ['Mango', 'Poly', 'Ajax'] с индексом 0 будет выведено '1 - Mango', а для индекса 2 выведет '3 - Ajax'.
 
-const logItems = function(array) {
-    for (let i = 1; i <= array.length; i++) {
-        console.log(`${i} - ${array[i-1]}`);
-    } 
- };
+            
+        }
+}
 
-logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
 
-logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+modify();
+
